@@ -1,0 +1,20 @@
+docker run -d \
+  --name magical_db \
+  -e MYSQL_ROOT_PASSWORD=mysecret \
+  -v spellbooks_volume:/var/lib/mysql \
+  mysql:latest
+
+
+Explanation of the docker commands above:
+
+-d → run detached
+
+--name magical_db → container name
+
+-e MYSQL_ROOT_PASSWORD=mysecret → sets root password
+
+-v spellbooks_volume:/var/lib/mysql → mounts a named volume
+
+mysql:latest → image used
+
+Note: This will automatically create spellbooks_volume if it doesn’t already exist.
