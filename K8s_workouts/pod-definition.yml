@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flaskapp-pod
+  labels:
+    app: flaskapp
+    type: backend
+    env: development
+    creationDate: "2025-09-18"
+    owner: try-devops-team
+spec:
+  containers: 
+    - name: python-container
+      image: python:3.11-slim
+      command: ["python3"]
+      args: ["-m", "http.server", "8000"]
+      ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-pod
+  labels:
+    app: web
+    env: development
+    owner: try-devops-team
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    app: cache
+    env: development
+    owner: try-devops-team
+spec:
+  containers:
+    - name: redis-container
+      image: redis
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+  labels:
+    app: static
+    env: development
+    owner: try-devops-team
+spec:
+  containers:
+    - name: httpd-container
+      image: httpd
+      env:
+        - name: APP_COLOR
+          value: green
+
+# Once pod definition file is defined, run the pod provision commands below using kubectl tool,
+
+$ kubectl apply -f simple-pod-definition.yml 
+
+$ kubectl get pods
+
+$ kubectl describe pod flaskapp-pod //detailed information about a pod
