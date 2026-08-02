@@ -1,18 +1,48 @@
+# Docker Swarm & Kubernetes (K8s)
+
 ![Docker Architecture](https://raw.githubusercontent.com/thangacodes/docker_kubernetes/main/docker_architect.png)
 
-# Docker-Swarm and Kubernetes (k8's):
+This repository contains Docker Swarm and Kubernetes examples, notes, and practical guides for beginners.
 
-How to Setup a Docker Swarm Cluster in AWS using EC2 instances?
+## Topics Covered
 
-How to create a simple MySql query script?
+### Docker Swarm
 
-Kubernetes manifests file
+* Set up a Docker Swarm cluster on AWS EC2 instances
+* Create and manage Swarm services
+* Scale applications
 
-ClusterIP concept detailed updation
+### MySQL
 
-NodePort concept detailed updation
+* Create a simple MySQL database
+* Basic SQL query scripts
 
-Load balancer concept detailed updation
+### Kubernetes
 
-Persistent volume and Persistent volume claim concepts
+* Kubernetes manifest (YAML) files
+* Deployments and Services
+* Pods and Namespaces
 
+### Kubernetes Service Types
+
+* ClusterIP
+* NodePort
+* LoadBalancer
+
+### Storage
+
+* Persistent Volume (PV)
+* Persistent Volume Claim (PVC)
+
+## Prerequisites
+
+* Docker
+* Kubernetes
+* AWS Account
+* EC2 Instances
+* kubectl
+* Basic Linux knowledge
+
+## Goal
+
+The goal of this repository is to help you learn Docker Swarm and Kubernetes through simple examples and hands-on practice.
