@@ -1,4 +1,4 @@
-![Screenshot 2024-04-10 222341](https://github.com/thangacodes/docker_k8s_notes/assets/38905243/4b4cf410-34c8-4228-8997-aaf35b204bd9)
+![Screenshot 2024-04-10 222341](https://github.com/thangacodes/docker_kuberntes/docker_architect.png]
 
 # Docker-Swarm and Kubernetes (k8's):
 
