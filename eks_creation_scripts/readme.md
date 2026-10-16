@@ -3,7 +3,7 @@ These scripts create and delete an Amazon EKS cluster in AWS using the AWS CLI.
 
 Scripts:
 ```
-Script	             Purpose
+Script	            Purpose
 create_eks.sh	      Creates the EKS cluster and managed node group, then updates the local kubeconfig.
 eks_delete.sh	      Deletes the managed node group first and then deletes the EKS cluster.
 ```
