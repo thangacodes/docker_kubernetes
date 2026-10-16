@@ -3,12 +3,12 @@ These scripts create and delete an Amazon EKS cluster in AWS using the AWS CLI.
 
 Scripts:
 ```
-Script	            Purpose
+Script	             Purpose
 create_eks.sh	      Creates the EKS cluster and managed node group, then updates the local kubeconfig.
 eks_delete.sh	      Deletes the managed node group first and then deletes the EKS cluster.
 ```
 
-Configuration
+Configuration:
 The scripts currently use the following configuration:
 ```
 AWS profile       : captain
@@ -18,12 +18,12 @@ Kubernetes version: 1.36
 Node group        : captain-workers
 Worker nodes      : 2 x t3.medium
 Subnets           : subnet-0d4fc000c9b699db6, subnet-03ecc3b339f36ff72
-```
+
 The creation script also uses these IAM roles:
 Cluster role: arn:aws:iam::11111111111:role/AmazonEKSAutoClusterRole
 Node role   : arn:aws:iam::11111111111:role/AmazonEKSAutoNodeRole
 Update the values in the scripts before running them in another AWS account, region, or VPC.
-
+```
 Prerequisites
 Install and configure the following tools:
 - AWS CLI
@@ -81,6 +81,7 @@ Important notes
 - The scripts use AWS CLI wait commands and may take several minutes to complete.
 - Kubernetes version 1.36 must be supported by the target AWS region and account when the creation script is run.
 
+```
 ```
 Troubleshooting:
 AWS credentials error
